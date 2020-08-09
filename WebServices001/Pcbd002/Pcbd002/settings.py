@@ -10,7 +10,7 @@ BASE_DIR = os.path.dirname(os.path.dirname(os.path.abspath(__file__)))
 #cmdip = 'ip a s | grep \'enp3s0\' | grep \'192.\' | awk \'{printcmdip = 'ifconfig | grep \'inet\' | grep \'172.\' | awk \'{print $2}\'' $2}\' | sed \'s/\/24//g\''
 ##4Docker.
 #cmdip = 'ip a s | grep \'inet\' | grep \'172.\' | awk \'{print $2}\' | sed \'s/\/16//g\'' 
-cmdip = 'ifconfig | grep \'inet\' | grep \'172.\' | awk \'{print $2}\''
+cmdip = 'ifconfig | grep \'inet\' | grep \'10.\' | awk \'{print $2}\''
 outcmd = subprocess.check_output(cmdip, shell=True) 
 
 # Quick-start development settings - unsuitable for production
