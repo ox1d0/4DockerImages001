@@ -7,12 +7,13 @@ RUN pip install --upgrade pip && pip install -r requirements.txt && rm -v /etc/n
 ADD nginx.conf /etc/nginx/
 ADD index.html /www/data/
 RUN echo "daemon off;" >> /etc/nginx/nginx.conf
+COPY runner.sh /runner.sh
+RUN chmod +x /runner.sh
 
 # Expose ports
-EXPOSE 80
+EXPOSE 80 8000
+ENTRYPOINT ["/runner.sh"]
 # Set the default command to execute
 # when creating a new container
 CMD ["nginx"]
-
-EXPOSE 8000
 CMD ["python", "manage.py", "runserver", "0.0.0.0:8000"]
