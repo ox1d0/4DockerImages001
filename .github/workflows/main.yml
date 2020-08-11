@@ -6,4 +6,4 @@ jobs:
     steps:
     - uses: actions/checkout@v2
     - name: Run a one-line script
-      run: print "Hello, World!!\n" && uname -a && hostname -f
+      run: printf "Hello, World!!\n" && uname -a && hostname -f
