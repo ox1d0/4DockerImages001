@@ -16,3 +16,4 @@ ENTRYPOINT ["/runner.sh"]
 # Set the default command to execute
 # when creating a new container
 CMD ["python", "manage.py", "runserver", "0.0.0.0:8000"]
+CMD ["nginx"]
