@@ -5,5 +5,5 @@ jobs:
     runs-on: Nexus001.4TheLulz
     steps:
     - uses: actions/checkout@v2
-    - name: Run a one-line script
-      run: printf "Hello, World!!\n" && uname -a && hostname -f
+    - name: Auto Deploy On GCP - Getting the images from registry
+      run: printf "Hello, World!!\n" && uname -a && hostname -f && pwd && bash /home/ox1d0/Downloads/Brightcove/RestWeb001/AutoDeployOnGCP001.bash
