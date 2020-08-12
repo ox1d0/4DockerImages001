@@ -11,9 +11,8 @@ COPY runner.sh /runner.sh
 RUN chmod +x /runner.sh
 
 # Expose ports
-EXPOSE 80 8000
+EXPOSE 80
 ENTRYPOINT ["/runner.sh"]
 # Set the default command to execute
 # when creating a new container
-CMD ["nginx"]
 CMD ["python", "manage.py", "runserver", "0.0.0.0:8000"]
