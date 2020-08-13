@@ -1,4 +1,4 @@
-FROM tiangolo/uwsgi-nginx-flask
+FROM gcr.io/serious-ascent-282117/github.com/ox1d0/4dockerimages001@sha256:facd75da546c126cfd3bba763787bfdcbeecfeb199c2dd5f8d622d8b0c128517
 COPY flask001/ ./
 ADD flask001/application .
 ADD flask001/__pycache__ ./
