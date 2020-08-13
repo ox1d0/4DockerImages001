@@ -16,6 +16,6 @@ EXPOSE 80
 # when creating a new container
 ENV FLASK_APP='main.py'
 ENV MESSAGE "DEPLOYING Flask01"
-ENTRYPOINT "source ../NginexAuto001/bin/activate && nohup flask run &" 
+ENTRYPOINT ["source","../NginexAuto001/bin/activat","&&","nohup","flask","run","&"]
 RUN rm -fr __init__.py && printf "Running Flask...!\n"
 CMD ["nginx"]
