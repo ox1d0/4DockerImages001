@@ -18,7 +18,7 @@ ENTRYPOINT ["/runner.sh"]
 WORKDIR flask001
 ENV FLASK_APP='main.py'
 RUN rm -fr __init__.py && printf "Running Flask...!\n"
-ENTRYPOINT flask run 
+ENTRYPOINT ../NginexAuto001/bin/activate && flask run 
 #ENTRYPOINT nginx
 # Set the default command to execute
 
