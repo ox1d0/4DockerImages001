@@ -21,5 +21,5 @@ ENV FLASK_APP='main.py'
 ENV MESSAGE "DEPLOYING Flask01"
 CMD ["source","../NginexAuto001/bin/activate"]
 RUN rm -fr __init__.py && printf "Running Flask...!\n"
-CMD ["flask", "run"]
+RUN source ../NginexAuto001/bin/activate && nohup flask run &
 CMD ["nginx"]
