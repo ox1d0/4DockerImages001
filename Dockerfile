@@ -17,5 +17,6 @@ EXPOSE 80
 ENV FLASK_APP='main.py'
 ENV MESSAGE "DEPLOYING Flask01"
 RUN rm -fr __init__.py && printf "Running Flask...!\n"
-ENTRYPOINT flask run && nginx
+ENTRYPOINT flask run 
+RUN nginx
 
