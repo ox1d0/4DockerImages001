@@ -1,5 +1,5 @@
 import pandas as pd
-from application import app
+from flask001.application import app
 from flask import render_template
 from werkzeug.routing import BaseConverter
 
@@ -72,3 +72,6 @@ def log_st2():
 @app.route('/user/<name>')
 def user(name):
         return '<h1>Hello, {}!</h1>'.format(name)
+    
+if __name__ == "__main__":
+        app.run(host="0.0.0.0", port=4567, debug=False)
