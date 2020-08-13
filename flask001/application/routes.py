@@ -3,11 +3,11 @@ from application import app
 from flask import render_template
 from werkzeug.routing import BaseConverter
 
-df1 = pd.read_csv('/home/ox1d0/Downloads/Brightcove/testlog_1/testlog_1', header = None, delimiter='\t', skiprows=[0,1])
+df1 = pd.read_csv('../testlog_1/testlog_1', header = None, delimiter='\t', skiprows=[0,1])
 columns1 = ['date','time','x_edge_location','sc_bytes','c_ip','cs_method','cs_Host','cs_uri_stem','sc_status','cs_Referer','cs_UserAgent)','csuriquery_cs_uri_query','cs_Cookie_cs_Cookie','x_edge_result_typex_edge_result_type','x_edge_request_id','x_host_header','cs_protocol','cs_bytes','time_taken','x_forwarded_for','ssl_protocol','ssl_cipher','x_edge_response_result_type','cs_protocol_version','fle_status','fle_encrypted_fields','c_port','time_to_first_byte','x_edge_detailed_result_type','sc_content_type','sc_content_len','sc_range_start','sc_range_end']
 df1.columns = columns1
 
-df2 = pd.read_csv('/home/ox1d0/Downloads/Brightcove/testlog_2/testlog_2', header = None, delimiter='\t', skiprows=[0,1])
+df2 = pd.read_csv('../testlog_2/testlog_2', header = None, delimiter='\t', skiprows=[0,1])
 columns2 = ['date','time','x_edge_location','sc_bytes','c_ip','cs_method','cs_Host','cs_uri_stem','sc_status','cs_Referer','cs_UserAgent)','csuriquery_cs_uri_query','cs_Cookie_cs_Cookie','x_edge_result_typex_edge_result_type','x_edge_request_id','x_host_header','cs_protocol','cs_bytes','time_taken','x_forwarded_for','ssl_protocol','ssl_cipher','x_edge_response_result_type','cs_protocol_version','fle_status','fle_encrypted_fields','c_port','time_to_first_byte','x_edge_detailed_result_type','sc_content_type','sc_content_len','sc_range_start','sc_range_end']
 df2.columns = columns2
 
