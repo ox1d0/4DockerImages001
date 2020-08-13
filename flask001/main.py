@@ -1,1 +1,1 @@
-from flask001.application import app
+from application import app
