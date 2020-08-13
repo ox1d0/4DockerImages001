@@ -11,6 +11,7 @@ ADD testlog_2/ ../testlog_2
 ADD nginx.conf /etc/nginx/
 RUN echo "daemon off;" >> /etc/nginx/nginx.conf
 # Create a runner script for the entrypoint
+WORKDIR /
 COPY runner.sh /runner.sh
 RUN chmod +x /runner.sh
 ENV FLASK_APP='main.py'
