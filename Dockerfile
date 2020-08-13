@@ -19,7 +19,7 @@ ENV MESSAGE "DEPLOYING Flask01"
 # Expose ports
 EXPOSE 80
 RUN rm -fr __init__.py && printf "Running Flask...!\n"
-ENTRYPOINT ["../runner.sh"]
+ENTRYPOINT ["/runner.sh"]
 #ENTRYPOINT nginx
 # Set the default command to execute
 # when creating a new container
