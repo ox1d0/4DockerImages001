@@ -1,4 +1,4 @@
 #!/bin/sh
-nohup flask run & 
+ nginx  
 # Startup the cmd
 exec "$@"
