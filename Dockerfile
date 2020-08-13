@@ -15,6 +15,6 @@ ENTRYPOINT ["/runner.sh"]
 # when creating a new container
 ENV FLASK_APP="main.py"
 ENV MESSAGE "DEPLOYING Flask01"
-RUN source NginexAuto001/bin/activate 
+CMD ["source","NginexAuto001/bin/activate"] 
 CMD ["flask", "run"]
 CMD ["nginx"]
