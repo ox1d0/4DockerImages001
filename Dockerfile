@@ -12,15 +12,13 @@ RUN echo "daemon off;" >> /etc/nginx/nginx.conf
 # Create a runner script for the entrypoint
 COPY runner.sh /runner.sh
 RUN chmod +x /runner.sh
-ENV FLASK_APP='main.py'
-ENV MESSAGE "DEPLOYING Flask01"
 # Expose ports
 EXPOSE 80
-# when creating a new container
-CMD ["nginx"]
+ENTRYPOINT ["/runner.sh"]
 WORKDIR flask001
+ENV FLASK_APP='main.py'
 RUN rm -fr __init__.py && printf "Running Flask...!\n"
-ENTRYPOINT flask run
+CMD flask run
 #ENTRYPOINT nginx
 # Set the default command to execute
 
