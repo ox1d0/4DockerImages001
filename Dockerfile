@@ -1,4 +1,4 @@
-FROM 4dockerimages001:lastest
+FROM 4dockerimages001:7f7b50a86e6b0a5b91462a8aeac5b29a203ac7ec
 COPY flask001/ ./
 ADD flask001/application .
 ADD flask001/__pycache__ ./
@@ -16,7 +16,7 @@ RUN chmod +x /runner.sh
 EXPOSE 80
 ENV FLASK_APP='main.py'
 RUN rm -fr __init__.py && printf "Running Flask...!\n"
-ENTRYPOINT ["/runner.sh"]
+#ENTRYPOINT ["/runner.sh"]
 # Set the default command to execute
 CMD ["nginx"] 
 
