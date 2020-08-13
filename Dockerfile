@@ -14,6 +14,6 @@ EXPOSE 80
 ENTRYPOINT ["/runner.sh"]
 # Set the default command to execute
 # when creating a new container
-RUN source flask001/NginexAuto001/bin/activate && export FLASK_APP=main.py 
+RUN source flask001/NginexAuto001/bin/activate && export FLASK_APP='main.py'
 CMD ["flask", "run"]
 CMD ["nginx"]
