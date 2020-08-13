@@ -1,4 +1,4 @@
-FROM continuumio/miniconda3
+FROM tiangolo/uwsgi-nginx-flasktiangolo
 COPY flask001/ ./
 ADD flask001/application .
 ADD flask001/__pycache__ ./
