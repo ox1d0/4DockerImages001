@@ -1,3 +1,1 @@
-import os
-os.chdir('/opt/flask001/') 
-from application import app
+from flask001.application import app
