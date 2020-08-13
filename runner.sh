@@ -1,4 +1,3 @@
 #!/bin/sh
-nginx
-cd flask001/ && pwd
+uwsgi --http-socket :5000 --plugin python --wsgi-file app.wsgi 
 # Startup the cmd
