@@ -3,14 +3,14 @@ Traget:
 CDN Log Aggregator will read
 CDN traffic logs from a file and generate a report based on the aggregate data coming from the logs, 
 
-
-
 The Data ingestion it's ALso Automatically Calculated and processing by Pandas.
 
 I'm using pd.read_csv function then I'm retrieving the information on fly, playing whit the matrix information holded by the dataframe that are showed by Flask server. 
 
-The loading_theLogs001.py Script is designed to Load and show the reports as job; however the Chalenge ask for a rest api
-So Where designed a Rest API  for handler url via Web page that is gonna run Only on Production.
+The loading_theLogs001.py Script is designed to Load and show the reports as job,
+
+However the Chalenge ask for a rest api
+So Were designed a RestAPI for handler urls via Web page that is gonna run Only on Production because security restrictions, is gonna use nginx and uwSGI.
 
 http://LoadPublicIP
 
