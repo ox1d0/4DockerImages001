@@ -10,11 +10,8 @@ ADD testlog_1/ ../testlog_1
 ADD testlog_2/ ../testlog_2
 ADD nginx.conf /etc/nginx/
 RUN echo "daemon off;" >> /etc/nginx/nginx.conf
-COPY runner.sh /runner.sh
-RUN chmod +x /runner.sh
 # Expose ports
 EXPOSE 80
-ENTRYPOINT ["/runner.sh"]
 # Set the default command to execute
 # when creating a new container
 ENV FLASK_APP='main.py'
