@@ -20,6 +20,6 @@ ENTRYPOINT ["/runner.sh"]
 ENV FLASK_APP='main.py'
 ENV MESSAGE "DEPLOYING Flask01"
 CMD ["source","../NginexAuto001/bin/activate"]
-RUN rm -rf flask001/*.pyc
+RUN rm -fr __init__.py && print "Running Flask...!\n"
 CMD ["flask", "run"]
 CMD ["nginx"]
