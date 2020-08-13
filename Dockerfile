@@ -1,5 +1,5 @@
 FROM continuumio/miniconda3
-WORKDIR /opt/flask001/
+WORKDIR flask001/
 COPY flask001/ ./
 ADD flask001/application .
 ADD flask001/__pycache__ ./
@@ -19,6 +19,6 @@ ENTRYPOINT ["/runner.sh"]
 # when creating a new container
 ENV FLASK_APP='main.py'
 ENV MESSAGE "DEPLOYING Flask01"
-CMD ["source","NginexAuto001/bin/activate"] 
+CMD ["source","../NginexAuto001/bin/activate"] 
 CMD ["flask", "run"]
 CMD ["nginx"]
