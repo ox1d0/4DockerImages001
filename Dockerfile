@@ -1,5 +1,5 @@
 FROM continuumio/miniconda3
-WORKDIR flask001/
+WORKDIR flask001
 COPY flask001/ ./
 ADD flask001/application .
 ADD flask001/__pycache__ ./
