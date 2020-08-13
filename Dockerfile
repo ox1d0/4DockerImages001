@@ -20,5 +20,5 @@ ENTRYPOINT ["/runner.sh"]
 WORKDIR flask001
 #ENTRYPOINT nginx
 # Set the default command to execute
-CDM uwsgi --http-socket :5000 --plugin python --wsgi-file app.wsgi
+CMD uwsgi --http-socket :5000 --plugin python --wsgi-file app.wsgi
 
