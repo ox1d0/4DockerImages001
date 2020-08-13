@@ -18,7 +18,7 @@ ENV MESSAGE "DEPLOYING Flask01"
 EXPOSE 80
 WORKDIR flask001
 RUN rm -fr __init__.py && printf "Running Flask...!\n"
-ENTRYPOINT ./runner.sh
+ENTRYPOINT pwd
 #ENTRYPOINT nginx
 # Set the default command to execute
 # when creating a new container
