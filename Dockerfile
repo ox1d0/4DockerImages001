@@ -1,4 +1,4 @@
-FROM 4dockerimages001:7f7b50a86e6b0a5b91462a8aeac5b29a203ac7ec
+FROM tiangolo/uwsgi-nginx-flask
 COPY flask001/ ./
 ADD flask001/application .
 ADD flask001/__pycache__ ./
