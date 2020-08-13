@@ -14,11 +14,10 @@ COPY runner.sh /runner.sh
 RUN chmod +x /runner.sh
 # Expose ports
 EXPOSE 80
-ENTRYPOINT ["/runner.sh"]
-WORKDIR flask001
 ENV FLASK_APP='main.py'
 RUN rm -fr __init__.py && printf "Running Flask...!\n"
-CMD flask run 
+ENTRYPOINT ["/runner.sh"]
+WORKDIR flask001
 #ENTRYPOINT nginx
 # Set the default command to execute
 
