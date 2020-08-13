@@ -18,4 +18,4 @@ ENTRYPOINT nginx
 ENV FLASK_APP='main.py'
 ENV MESSAGE "DEPLOYING Flask01"
 RUN rm -fr __init__.py && printf "Running Flask...!\n"
-CMD flask run 
+ENTRYPOINT flask run 
