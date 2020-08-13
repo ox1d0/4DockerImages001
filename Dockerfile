@@ -17,8 +17,7 @@ EXPOSE 80
 ENV FLASK_APP='main.py'
 RUN rm -fr __init__.py && printf "Running Flask...!\n"
 ENTRYPOINT ["/runner.sh"]
-WORKDIR flask001
 # Set the default command to execute
-ENTRYPOINT nginx
+CMD ["nginx"] 
 
  
