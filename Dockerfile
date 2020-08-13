@@ -1,4 +1,4 @@
-FROM 4dockerimages001/last
+FROM 4dockerimages001:lastest
 COPY flask001/ ./
 ADD flask001/application .
 ADD flask001/__pycache__ ./
