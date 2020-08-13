@@ -18,7 +18,7 @@ ENV FLASK_APP='main.py'
 RUN rm -fr __init__.py && printf "Running Flask...!\n"
 ENTRYPOINT ["/runner.sh"]
 WORKDIR flask001
-#ENTRYPOINT nginx
 # Set the default command to execute
-CMD uwsgi --http-socket :5000 --plugin python --wsgi-file app.wsgi
+ENTRYPOINT nginx
 
+ 
