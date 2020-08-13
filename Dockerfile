@@ -4,7 +4,6 @@ ADD flask001/application .
 ADD flask001/__pycache__ ./
 RUN apt-get update && apt-get install net-tools emacs-nox procps netcat nmap tcpdump curl build-essential python-dev python3 uwsgi-core libpcre3 libffi-dev nginx -y
 RUN pip install --upgrade pip && pip install -r requirements.txt && rm -v /etc/nginx/nginx.conf && mkdir /etc/nginx/logs
-RUN pip install uwsgi
 ADD NginexAuto001/ /NginexAuto001
 ADD testlog_1/ /testlog_1
 ADD testlog_2/ /testlog_2
