@@ -5,4 +5,4 @@ sed -i.bak 's/HOSTNAME/'"$HOSTNAME"'/g' /www/data/index.html
 # Startup the cmd
 exec "$@"
 # for flask
-export FLASK_APP=main.py'
+export FLASK_APP=main.py
