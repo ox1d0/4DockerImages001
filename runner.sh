@@ -1,4 +1,4 @@
 #!/bin/sh
- nginx  
+nginx
 # Startup the cmd
 exec "$@"
