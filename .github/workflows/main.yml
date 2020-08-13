@@ -6,4 +6,4 @@ jobs:
     steps:
     - uses: actions/checkout@v2
     - name: Auto Deploy On GCP - Getting the images from registry
-      run: uname -a && hostname -f && id && bash /home/ox1d0/Downloads/Brightcove/RestWeb001/AutoDeployOnGCP001.bash
+      run: uname -a && hostname -f && bash /home/ox1d0/4Brightcove001/4DockerImages001/AutoDeployOnGCP001.bash
