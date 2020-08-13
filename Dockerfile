@@ -1,4 +1,3 @@
-#
 #tiangolo/uwsgi-nginx-flask
 FROM continuumio/miniconda3
 COPY flask001/ ./
@@ -21,5 +20,3 @@ RUN rm -fr __init__.py && printf "Running Flask...!\n"
 #ENTRYPOINT ["/runner.sh"]
 # Set the default command to execute
 CMD ["nginx"] 
-
- 
